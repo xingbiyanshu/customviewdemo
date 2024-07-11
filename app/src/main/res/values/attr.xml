@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleView">
+        <attr name="radius" format="dimension"/>
+        <attr name="color" format="color"/>
+        <attr name="radius2" format="dimension"/>
+        <attr name="color2" format="color"/>
+        <attr name="radius3" format="dimension"/>
+        <attr name="color3" format="color"/>
+        <attr name="radius4" format="dimension"/>
+        <attr name="color4" format="color"/>
+        <attr name="radius5" format="dimension"/>
+        <attr name="color5" format="color"/>
+        <attr name="radius6" format="dimension"/>
+        <attr name="color6" format="color"/>
+    </declare-styleable>
+</resources>
