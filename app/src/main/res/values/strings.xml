@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">CustomViewDemo</string>
+    <string name="DuffXfermode">PorterDuffXfermode</string>
+    <string-array name="PorterDuffXfermode">
+        <item>CLEAR</item>
+        <item>SRC</item>
+        <item>DST</item>
+        <item>SRC_OVER</item>
+        <item>DST_OVER</item>
+        <item>SRC_IN</item>
+        <item>DST_IN</item>
+        <item>SRC_OUT</item>
+        <item>DST_OUT</item>
+        <item>SRC_ATOP</item>
+        <item>DST_ATOP</item>
+        <item>XOR</item>
+        <item>DARKEN</item>
+        <item>LIGHTEN</item>
+        <item>MULTIPLY</item>
+        <item>SCREEN</item>
+        <item>ADD</item>
+        <item>OVERLAY</item>
+    </string-array>
 </resources>

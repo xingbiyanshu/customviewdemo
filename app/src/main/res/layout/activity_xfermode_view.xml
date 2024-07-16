@@ -5,25 +5,23 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CircleViewActivity">
+    tools:context=".XfermodeViewActivity">
 
-    <com.sissi.customviewdemo.CircleView
-        android:id="@+id/circleView"
+    <com.sissi.customviewdemo.XfermodeView
+        android:id="@+id/xfermodeView"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintDimensionRatio="h,1:1"
-        android:clickable="true"
-        android:focusable="true"
-        app:color="@android:color/holo_red_light"
-        app:color2="@android:color/holo_green_light"
-        app:color3="@android:color/holo_blue_light"
-        app:color4="@android:color/black"
-        app:radius="40dp"
-        app:radius2="80dp"
-        app:radius3="120dp"
-        app:radius4="160dp" />
+        app:layout_constraintDimensionRatio="h,1:1"/>
+
+    <Spinner
+        android:id="@+id/DuffXfermode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xfermodeView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

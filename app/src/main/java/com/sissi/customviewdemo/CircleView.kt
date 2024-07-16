@@ -49,13 +49,6 @@ class CircleView : View {
     }
 
 
-    //2. 重写测量阶段相关方法（onMeasure()）；
-    //由于不需要自定义 View 的尺寸，所以不用重写该方法
-//    @Override
-//    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-//        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-//    }
-
     // 默认该控件充满屏幕，我们希望该控件的大小为同该圆形直径一样大的一个正方形。
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         val w: Int = (radiusList.last()*2).toInt()
@@ -67,7 +60,7 @@ class CircleView : View {
         setMeasuredDimension(finalSize, finalSize)
     }
 
-    //3. 重写布局阶段相关方法（onLayout()（仅 ViewGroup 需要重写））；
+    //仅 ViewGroup 需要重写
     //由于没有子 View 需要布局，所以不用重写该方法
 //    @Override
 //    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
@@ -76,6 +69,7 @@ class CircleView : View {
 
     //重写绘制阶段相关方法（onDraw() 绘制主体、dispatchDraw() 绘制子 View 和 onDrawForeground() 绘制前景，背景只能通过android:background设置）；
     override fun onDraw(canvas: Canvas) {
+        canvas.drawColor(Color.LTGRAY)
         radiusList.reversed().forEachIndexed { index, radius ->
             val color = colorList[radiusList.size-1-index]
             println("radius=$radius, color=$color, width=$width, height=$height")

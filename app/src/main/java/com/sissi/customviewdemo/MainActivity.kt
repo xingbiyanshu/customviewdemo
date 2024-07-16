@@ -23,4 +23,9 @@ class MainActivity : AppCompatActivity() {
     fun onCircleViewClicked(v: View){
         startActivity(Intent(this, CircleViewActivity::class.java))
     }
+
+    fun onXfermodeViewClicked(v: View){
+        startActivity(Intent(this, XfermodeViewActivity::class.java))
+    }
+
 }
