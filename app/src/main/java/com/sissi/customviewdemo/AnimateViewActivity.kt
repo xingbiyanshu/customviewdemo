@@ -1,7 +1,5 @@
 package com.sissi.customviewdemo
 
-import android.graphics.PorterDuff
-import android.graphics.PorterDuffXfermode
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
@@ -12,23 +10,23 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class XfermodeViewActivity : AppCompatActivity() {
+class AnimateViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_xfermode_view)
+        setContentView(R.layout.activity_animate_view)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        val xfermodeView = findViewById<XfermodeView>(R.id.xfermodeView)
-        val spinner = findViewById<Spinner>(R.id.DuffXfermode)
+        val animateview = findViewById<AnimateView>(R.id.animateview)
+        val spinner = findViewById<Spinner>(R.id.animateviewSpinner)
         // Create an ArrayAdapter using the string array and a default spinner layout.
         ArrayAdapter.createFromResource(
             this,
-            R.array.PorterDuffXfermode,
+            R.array.animate,
             android.R.layout.simple_spinner_item
         ).also { adapter ->
             // Specify the layout to use when the list of choices appears.
@@ -37,8 +35,7 @@ class XfermodeViewActivity : AppCompatActivity() {
             spinner.adapter = adapter
         }
 
-        spinner.setSelection(PorterDuff.Mode.XOR.ordinal)
-
+        spinner.setSelection(AnimateView.Type.PropertyAnimation.ordinal)
         spinner.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -47,7 +44,7 @@ class XfermodeViewActivity : AppCompatActivity() {
                 id: Long
             ) {
                 val mode = parent!!.getItemAtPosition(position) as String
-                xfermodeView.xfermode = PorterDuffXfermode(PorterDuff.Mode.valueOf(mode))
+                animateview.animateType = AnimateView.Type.valueOf(mode)
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {

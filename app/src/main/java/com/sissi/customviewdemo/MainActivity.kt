@@ -28,4 +28,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this, XfermodeViewActivity::class.java))
     }
 
+    fun onAnimateViewClicked(v: View){
+        startActivity(Intent(this, AnimateViewActivity::class.java))
+    }
 }

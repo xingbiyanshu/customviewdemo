@@ -21,4 +21,10 @@
         <item>ADD</item>
         <item>OVERLAY</item>
     </string-array>
+
+    <string-array name="animate">
+        <item>PropertyAnimation</item>
+        <item>ViewAnimation</item>
+    </string-array>
+
 </resources>

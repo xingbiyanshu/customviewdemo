@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:ordering="sequentially"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+    android:shareInterpolator="true">
+
+    <set android:ordering="together">
+        <objectAnimator
+            android:propertyName="radius"
+            android:duration="3000"
+            android:valueFrom="0"
+            android:valueTo="200"
+            android:repeatCount="2"
+            android:repeatMode="reverse"
+            android:valueType="floatType">
+        </objectAnimator>
+
+        <objectAnimator
+            android:propertyName="alpha"
+            android:duration="3000"
+            android:valueFrom="10"
+            android:valueTo="255"
+            android:valueType="intType">
+        </objectAnimator>
+    </set>
+
+    <objectAnimator
+        android:propertyName="color"
+        android:duration="3000"
+        android:valueFrom="#ff0000"
+        android:valueTo="#0000ff"
+        android:valueType="colorType">
+    </objectAnimator>
+
+<!--    <objectAnimator-->
+<!--        android:propertyName="position"-->
+<!--        android:duration="3000"-->
+<!--        android:valueFrom="0"-->
+<!--        android:valueTo="1"-->
+<!--        android:valueType="floatType">-->
+<!--    </objectAnimator>-->
+
+</set>
