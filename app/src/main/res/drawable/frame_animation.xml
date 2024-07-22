@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--逐帧动画
+逐帧动画是视图动画的一种（另一种是补间动画），视图动画只能作用于view，作为其background或者对于imageview作为其src，
+不可作用于View组件的属性，如：颜色、背景、长度等等。
+逐帧动画实现较简单，就逐帧播放；
+逐帧动画由于使用的是一张张图片，因此占用内存大，应尽量避免使用大图片；
+优先考虑使用属性动画，只在动画较复杂属性动画难以实现时选用逐帧动画。
+-->
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/ic_launcher_background" android:duration="1000" />
+    <item android:drawable="@drawable/ic_launcher_foreground" android:duration="1000" />
+</animation-list>

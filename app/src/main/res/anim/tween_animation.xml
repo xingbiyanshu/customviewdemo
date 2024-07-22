@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<!--补间动画（最老的动画，API 1就有了，当下尽量避免使用）
+补间动画操作的只是动画的属性：透明度、缩放、平移、旋转这四种，而非View的属性，如宽高、颜色等，且动画的对象只能是 View。
+同时在 View 的绘制体系中经过 Measure、Layout、Draw 之后View 的真实位置已经确定，
+而 View Animations 仅仅只能参与到 Draw 这之中，这就意味着我们使用 View Animations
+仅是改变了屏幕绘制位置，而真实位置是不变的。例如我们增加点击事件时，响应的区域仍然是 View 之前的位置。
+所以，应尽量避免使用该类型动画。
+-->
 <set xmlns:android="http://schemas.android.com/apk/res/android"
     android:duration="3000"
-    android:ordering="sequentially">
+    android:ordering="sequentially"
+    android:fillAfter="true"> <!-- fillAfter="true"表示动画结束后停留在最后一帧，默认是会回复到原始位置。 -->
 
     <alpha
         android:fromAlpha="0.2"
@@ -22,8 +29,7 @@
     <translate
         android:fromXDelta="-100%"
         android:toXDelta="100%"
-        android:repeatCount="1"
-        android:fillAfter="true"/>
+        android:repeatCount="1"/>
 
 <!--    <rotate-->
 <!--        android:fromDegrees="float"-->

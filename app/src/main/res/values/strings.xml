@@ -24,7 +24,8 @@
 
     <string-array name="animate">
         <item>PropertyAnimation</item>
-        <item>ViewAnimation</item>
+        <item>ViewAnimationTween</item>
+        <item>ViewAnimationFrame</item>
     </string-array>
 
 </resources>
