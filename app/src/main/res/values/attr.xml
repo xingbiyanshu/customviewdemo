@@ -14,4 +14,8 @@
         <attr name="radius6" format="dimension"/>
         <attr name="color6" format="color"/>
     </declare-styleable>
+
+    <declare-styleable name="FlexboxLayout">
+        <attr name="wrap" format="boolean"/>
+    </declare-styleable>
 </resources>

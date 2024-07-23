@@ -209,7 +209,7 @@ class AnimateView : View {
         /*
         * 帧动画对于ImageView可以直接设置它的src，对于普通View则通过设置它的background
         * */
-        setBackgroundResource(R.anim.frame_animation)
+        setBackgroundResource(R.drawable.frame_animation)
         val bg = background
         if (bg is Animatable){
             bg.start()
