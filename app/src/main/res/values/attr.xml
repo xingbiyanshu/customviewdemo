@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <declare-styleable name="CircleView">
         <attr name="radius" format="dimension"/>
         <attr name="color" format="color"/>
@@ -16,6 +17,10 @@
     </declare-styleable>
 
     <declare-styleable name="FlexboxLayout">
-        <attr name="wrap" format="boolean"/>
+        <attr name="poemMode" format="boolean"/> <!--诗歌模式。一行只一个item，且item之间自动缩进-->
+        <attr name="indent" format="dimension"/> <!--每行的缩进。仅"poemMode=true"时有效-->
+        <attr name="itemGap" format="dimension"/> <!--item之间的间隙。仅"poemMode=false"时有效-->
+        <attr name="rowGap" format="dimension"/> <!--行之间的间隙-->
     </declare-styleable>
+
 </resources>

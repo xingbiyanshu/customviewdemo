@@ -28,4 +28,9 @@
         <item>ViewAnimationFrame</item>
     </string-array>
 
+    <string-array name="flexboxLayoutMode">
+        <item>Normal</item>
+        <item>Poem</item>
+    </string-array>
+
 </resources>

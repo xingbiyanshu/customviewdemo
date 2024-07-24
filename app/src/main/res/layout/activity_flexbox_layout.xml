@@ -8,6 +8,7 @@
     tools:context=".FlexboxLayoutActivity">
 
     <ScrollView
+        android:id="@+id/sv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none">
@@ -16,20 +17,23 @@
             android:id="@+id/flexbox_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:poemMode="true"
+            app:indent="@dimen/flexboxlayout_indent"
+            app:rowGap="@dimen/flexboxlayout_rowgap"
             android:background="@android:color/darker_gray"
             android:padding="@dimen/flexboxlayout_padding">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_launcher_background"
-                android:text="将进酒" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_launcher_foreground"
-                android:text="李白" />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/ic_launcher_background"-->
+<!--                android:text="将进酒" />-->
+<!--                -->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/ic_launcher_foreground"-->
+<!--                android:text="李白" />-->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -189,5 +193,14 @@
         </com.sissi.customviewdemo.FlexboxLayout>
 
     </ScrollView>
+
+    <Spinner
+        android:id="@+id/flexboxLayoutModeSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sv"
+        app:layout_constraintVertical_bias="0.6"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

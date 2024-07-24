@@ -3,5 +3,8 @@
 <resources>
 
     <dimen name="flexboxlayout_padding">20dp</dimen>
+    <dimen name="flexboxlayout_indent">20dp</dimen>
+    <dimen name="flexboxlayout_itemgap">10dp</dimen>
+    <dimen name="flexboxlayout_rowgap">5dp</dimen>
 
 </resources>
